@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Search box */
+#searchBox {
+    width: 500px;
+    max-width: 80vw;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+#searchBox::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#searchBox:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+/* Button grid */
+button {
+    margin: 12px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: 0.25s ease;
+    backdrop-filter: blur(8px);
+}
+
+/* Hover effect */
+button:hover {
+    background: rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout spacing */
+form {
+    margin-bottom: 40px;
+}
+
+button:nth-child(n+2) {
+    width: 120px;
+}
+.quick-links {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;
+    gap: 10px;                 /* space between buttons */
+    flex-wrap: nowrap;         /* force single line */
+    margin-top: 40px;
+}
+
+.quick-links button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: 0.25s ease;
+}
+
+.quick-links button:hover {
+    background: rgba(59, 130, 246, 0.4);
+    transform: translateY(-3px);
+}
