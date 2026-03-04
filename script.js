@@ -28,3 +28,26 @@ document.getElementById("Xprime").addEventListener("click", function(e){
 document.getElementById("School").addEventListener("click", function(e){
     window.location.href = "https://www.dpsjoka.com"
 })
+
+function getBrowserSystemInfo() {
+  const systemInfo = {
+    userAgent: navigator.userAgent,
+    platform: navigator.userAgentData?.platform || navigator.platform,
+    language: navigator.language,
+    screenResolution: `${screen.width}x${screen.height}`,
+    cpuCores: navigator.hardwareConcurrency,
+    
+  };
+
+  console.log("Browser/Client System Information:", systemInfo);
+  stats=document.getElementById("stats");
+  let statsHTML = `
+  <p>User agent: ${systemInfo.userAgent}</p>
+  <p>Platform: ${systemInfo.platform}</p>
+  <p>Language: ${systemInfo.language}</p>
+  <p>Screen Resolution: ${systemInfo.screenResolution}</p>
+  <p>No. of CPU cores: ${systemInfo.cpuCores}</p>
+  `
+  stats.innerHTML = statsHTML
+}
+getBrowserSystemInfo();

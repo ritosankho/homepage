@@ -8,13 +8,16 @@
 /* Background */
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    font-family: Consolas, Monaco, "Lucida Console", monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
+    justify-content: flex-start;
+    padding-top: 310px;
+    padding-right: 100px;
+    color: #FFFFFF;
+    
 }
 
 /* Search box */
@@ -22,7 +25,9 @@ body {
     width: 500px;
     max-width: 80vw;
     padding: 15px 20px;
+    
     font-size: 18px;
+    font-family: Consolas, Monaco, "Lucida Console", monospace;
     border-radius: 30px;
     border: 1px solid;
     outline: none;
@@ -30,10 +35,12 @@ body {
     color: white;
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
+    
 }
 
 #searchBox::placeholder {
     color: rgba(255, 255, 255, 0.6);
+    
 }
 
 #searchBox:focus {
@@ -46,6 +53,8 @@ button {
     margin: 12px;
     padding: 15px 25px;
     font-size: 16px;
+    font-family: Consolas, Monaco, "Lucida Console", monospace;
+    
     border-radius: 15px;
     border: none;
     cursor: pointer;
@@ -70,12 +79,16 @@ form {
 button:nth-child(n+2) {
     width: 120px;
 }
+
 .quick-links {
     display: flex;
-    justify-content: center;   /* center horizontally */
+    justify-content: center;
+    /* center horizontally */
     align-items: center;
-    gap: 10px;                 /* space between buttons */
-    flex-wrap: nowrap;         /* force single line */
+    gap: 10px;
+    /* space between buttons */
+    flex-wrap: nowrap;
+    /* force single line */
     margin-top: 40px;
 }
 
@@ -92,4 +105,10 @@ button:nth-child(n+2) {
 .quick-links button:hover {
     background: rgba(59, 130, 246, 0.4);
     transform: translateY(-3px);
+}
+
+#stats{
+    padding-top: 100px;
+    padding-left: 200px;
+    font-size: 25px;
 }
