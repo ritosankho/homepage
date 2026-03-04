@@ -3,11 +3,11 @@
 
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
 </head>
 
-<body background="Arch.png">
+<body background="{{ url_for('static', filename='Arch.png') }}">
     <div id = "clock"></div>
     <form id="searchForm">
         <input type="text" name="q" id="searchBox" placeholder="Search Google" autocomplete="on">
@@ -24,7 +24,7 @@
         <button id="School">School</button>
     </div>
     <div id="stats"></div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 
 </html>
